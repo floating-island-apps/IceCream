@@ -67,7 +67,8 @@ extension DatabaseManager {
                         // And the crash log tells us to "CKDatabaseOperations must be submitted to a CKDatabase".
                         // So I guess there must be something changed in the daemon. We temperorily add this availabilty check.
                         if #available(iOS 15, *) {
-                            self.database.add(modifyOp)
+                            // Do nothings here
+//                            self.database.add(modifyOp)
                         } else {
                             self.container.add(modifyOp)
                         }
